@@ -1,11 +1,11 @@
-# Copyright (C) 2017, Cyberhaven
+# Copyright (C) 2017-2019, Cyberhaven
 # All rights reserved.
 #
 # Licensed under the Cyberhaven Research License Agreement.
 
 # Installs S2E and its associated libraries and tools to /opt/s2e
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Install build dependencies
 RUN apt-get update &&                                                       \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get -y install libdwarf-dev libelf-dev            \
     libmemcached-dev libpq-dev libc6-dev-i386 binutils-dev                  \
     libboost-system-dev libboost-serialization-dev libboost-regex-dev       \
     libprotobuf-dev protobuf-compiler libbsd-dev libpixman-1-dev            \
-    libglib2.0-dev python-docutils libpng12-dev gcc-multilib g++-multilib
+    libglib2.0-dev python-docutils libpng-dev gcc-multilib g++-multilib
 
 # Install S2E git
 RUN apt-get -y install git
